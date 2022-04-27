@@ -1,0 +1,277 @@
+:root {
+    --primary: #DD486F;
+    --secondary-light: #555370;
+    --secondary-medium: #343344;
+    --secondary-dark: #242533;
+    --white: #FFF;
+    --lightText: rgba(255, 255, 255, 0.45);
+    --black: #000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Almarai', sans-serif !important;
+    background-color: var(--secondary-medium) !important;
+    overflow-x: hidden;
+}
+
+.line {
+    height: 1.2px;
+    width: 20px;
+    background-color: var(--primary);
+}
+
+.sectionTitle {
+    color: var(--primary);
+    font-size: 12px;
+}
+
+.card {
+    background-color: var(--secondary-light) !important;
+    transition: all .3s ease;
+    min-height: 200px;
+}
+
+.card:hover {
+    background-color: var(--primary) !important;
+}
+
+.cardIcon {
+    height: 25px;
+    width: 25px;
+}
+
+.cardIconImage {
+    height: 100%;
+    width: 100%;
+}
+
+.cardText {
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 400;
+}
+
+/* HEADER STYLING */
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 2000;
+    background-color: var(--secondary-light);
+}
+
+.logo {
+    height: 30px;
+    width: 30px;
+}
+
+.smileIcon {
+    height: 30px;
+    width: 30px;
+}
+
+.navLink {
+    font-size: 10px;
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 8px 15px;
+    transition: all .4s ease;
+}
+
+.navLink:hover {
+    color: var(--primary);
+}
+
+/* HOME STYLING */
+.home {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.left .name {
+    font-size: 41px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.left .introduction .bodyTitle {
+    font-size: 18px;
+    color: var(--white);
+}
+
+.left .introduction .bodyContent {
+    font-size: 10px;
+    color: var(--lightText);
+}
+
+.right {
+    text-align: right;
+}
+
+.right .heroPic {
+    height: 100%;
+    width: 300px;
+}
+
+/* SERVICE STYLING */
+#services {
+    background-color: var(--secondary-dark);
+    padding: 110px 0 40px 0;
+}
+
+/* PROJECTS STYLING */
+#projects {
+    background-color: var(--secondary-dark);
+    padding: 110px 0 40px 0;
+    margin-bottom: 865px;
+}
+
+.projectHeading {
+    color: var(--white);
+    font-size: 25px;
+}
+
+.projectCard {
+    height: 400px;
+    transition: all .4s ease;
+    border: 5px solid var(--white) !important;
+    position:relative;
+    z-index: 0;
+}
+
+.projectCard::before{
+    content:attr(data-head);
+    position: absolute;
+    height:90%;
+    width:90%;
+    background-color: var(--primary);
+    opacity: .8;
+    top:50%;
+    left:50%;
+    color: var(--black);
+    transform: translate(-50%,-50%) scale(0);
+    z-index:1;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 25px;
+    font-weight: 600;
+    text-align:center;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.p:hover .projectCard::before{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+.p1 .projectCard{
+    background-image: url('../images/UI\ p1.PNG');
+    background-position: top;
+    background-size: cover;
+}
+.p2 .projectCard{
+    background-image: url('../images/mock\ up1.PNG');
+    background-position: top;
+    background-size: cover;
+}
+.p3 .projectCard{
+    background-image: url('../images/ToDo\ list.PNG');
+    background-position: top;
+    background-size: cover;
+}
+.p4 .projectCard{
+    background-image: url('../images/mock2.JPG');
+    background-position: top;
+    background-size: cover;
+}
+.p1 {
+    right: 0;
+}
+
+.p2 {
+    top: 150px;
+}
+
+.p3 {
+    right: 0;
+    top: 430px;
+}
+
+.p4 {
+    top: 580px;
+}
+
+
+
+/* CONTACT STYLING */
+#contact {
+    background-color: var(--secondary-dark);
+    padding: 110px 0 100px 0;
+}
+
+.contactHeading {
+    color: var(--white);
+    font-size: 25px;
+}
+
+.contactLabel {
+    color: var(--primary);
+}
+
+.input {
+    padding: 8px 15px;
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    outline: none;
+    color:var(--white);
+}
+
+::placeholder {
+    color: var(--primary);
+}
+
+.formSubmit {
+    padding:8px 15px;
+    background-color:var(--primary);
+    outline:none;
+    border:2px solid var(--primary);
+    color: var(--white);
+    letter-spacing: 6px;
+    transition:all .4s ease;
+    font-weight: 600;
+}
+
+.formSubmit:hover{
+    background-color: transparent;
+    color: var(--primary);
+}
+
+/* FOOTER STYLING */
+#footer {
+    background-color: var(--secondary-light);
+    padding: 40px 0;
+}
+
+.footerText {
+    font-size:15px;
+    font-weight: 600;
+    color: var(--white);
+}
+.footerText span{
+    font-weight: 200;
+}
+
+.socialIcon{
+    height:25px;
+    width: 25px;
+    margin: 8px 12px 0 12px;
+}
